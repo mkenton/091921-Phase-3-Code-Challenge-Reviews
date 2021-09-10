@@ -37,3 +37,15 @@ puts Review.first.product.name
 puts
 puts "Testing all review comments for user 2"
 puts user2.reviews.map(&:comment)
+puts
+
+puts "Test leave_review to create new review for product 2"
+product2.leave_review(user3, 5, "Amazon paid me to review this")
+product2.leave_review(user2, 1, "Apple bribed me to review this poorly")
+# puts "Test: Show all ratings on product 2"
+# puts product2.reviews.map(&:star_rating)
+puts "Test: print_all_reviews "
+# user2.remove_reviews
+puts product2.print_all_reviews
+puts "Test: user 2 favorite product"
+# user2.favorite_product
